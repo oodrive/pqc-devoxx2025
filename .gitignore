@@ -1,0 +1,41 @@
+api.env
+bom.txt
+pom.xml
+.env
+*.bak
+
+# IDE
+.vscode
+# Directories #
+/build/
+/bin/
+target
+node_modules/
+.factorypath
+# OS Files #
+.DS_Store
+
+######################
+# Eclipse
+######################
+.project
+.metadata
+.classpath
+.settings/
+.loadpath
+
+# IntelliJ Files
+.idea/
+*.iml
+*.iws
+
+# MacOs Files
+.DS_Store
+.Spotlight-V100
+.Trashes
+._*
+
+# Windows Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
