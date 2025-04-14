@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+html { color-scheme: light dark; }
+body { width: 35em; margin: 0 auto;
+font-family: Tahoma, Verdana, Arial, sans-serif; }
+</style>
+</head>
+<body style="font-size: 200%;">
+	<h1>TLS info</h1>
+
+	<table>
+		<tr>
+			<td>Date</td>
+			<td><!--# echo var="date_local" --></td>
+		</tr>
+		<tr>
+			<td>Cipher</td>
+			<td><!--# echo var="ssl_cipher" --></td>
+		</tr>
+                <tr style="font-weight: bold;">
+                        <td>Curve</td>
+                        <td><!--# if expr="$ssl_curve = 0x11ec" -->
+        X25519MLKEM768
+<!--# else -->
+        <!--# echo var="ssl_curve" -->
+<!--# endif --></td>
+                </tr>
+                <tr>
+                        <td>Protocol</td>
+                        <td><!--# echo var="ssl_protocol" --></td>
+                </tr>
+                <tr>
+                        <td>ALPN</td>
+                        <td><!--# echo var="ssl_alpn_protocol" --></td>
+                </tr>
+	</table>
+</body>
+</html>
